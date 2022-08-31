@@ -1,3 +1,13 @@
+---
+import "../styles/global.css";
+
+export interface LayoutProps {
+	title: string;
+}
+
+const { title } = Astro.props as LayoutProps;
+---
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -11,7 +21,7 @@
 			href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
 			rel="stylesheet"
 		/>
-		<title>Astro Website</title>
+		<title>{title}</title>
 	</head>
 	<body>
 		<slot />
