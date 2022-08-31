@@ -1,5 +1,6 @@
 ---
 import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 import "../styles/global.css";
 
 export interface LayoutProps {
@@ -24,8 +25,9 @@ const { title } = Astro.props as LayoutProps;
 		/>
 		<title>{title}</title>
 	</head>
-	<body>
+	<>
 		<Header />
 		<slot />
-	</body>
+		<Footer />
+	</>
 </html>
